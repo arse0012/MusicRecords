@@ -25,9 +25,28 @@ namespace MusicRecords
             _yearOfPublication = yearOfPublication;
         }
 
-        public string Title { get; set; }
-        public string Artist { get; set; }
-        public int Duration { get; set; }
-        public string YearOfPublication { get; set; }
+        public string Title
+        {
+            get { return _title;}
+            set { _title = value; }
+        }
+        public string Artist
+        {
+            get { return _artist;}
+            set { _artist = value; }
+
+        }
+
+        public int Duration
+        {
+            get { return _duration;}
+            set { _duration = value; }
+        }
+
+        public string YearOfPublication
+        {
+            get { return _yearOfPublication;}
+            set { _yearOfPublication = value; }
+        }
     }
 }
