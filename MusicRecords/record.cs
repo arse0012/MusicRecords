@@ -7,6 +7,7 @@ namespace MusicRecords
 {
     public class record
     {
+        private int _id = 0;
         private string _title;
         private string _artist;
         private int _duration;
@@ -19,6 +20,7 @@ namespace MusicRecords
 
         public record(string title, string artist, int duration, string yearOfPublication)
         {
+             _id = 0;
             _title = title;
             _artist = artist;
             _duration = duration;
@@ -47,6 +49,11 @@ namespace MusicRecords
         {
             get { return _yearOfPublication;}
             set { _yearOfPublication = value; }
+        }
+        public int Id
+        {
+            get { return _id; }
+            set { _id = value; }
         }
     }
 }

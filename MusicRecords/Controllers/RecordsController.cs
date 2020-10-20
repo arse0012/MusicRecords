@@ -30,9 +30,9 @@ namespace MusicRecords.Controllers
 
         // GET: api/Records/5
         [HttpGet("{id}", Name = "Get")]
-        public string Get(int id)
+        public record Get(int id)
         {
-            return "value";
+            return recordList.Find(i => i.Id == id);
         }
 
         // POST: api/Records
