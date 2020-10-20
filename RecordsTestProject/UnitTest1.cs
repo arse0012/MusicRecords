@@ -34,5 +34,12 @@ namespace RecordsTestProject
             //assert
             Assert.AreEqual(2,listRecord.Count);
         }
+
+        [TestMethod]
+        public void GetIdTest()
+        {
+            List<record> recordList = new List<record>(rntr.Get());
+            Assert.AreEqual(1, recordList[0].Id);
+        }
     }
 }
