@@ -13,8 +13,8 @@ namespace MusicRecords.Controllers
     {
         private List<record> recordList = new List<record>()
         {
-            new record("hello", "Steven Wilson", 95, "1997"),
-            new record("abc", "Jackson  Five", 234, "1988")
+            new record(1,"hello", "Steven Wilson", 95, "1997"),
+            new record(2,"abc", "Jackson  Five", 234, "1988")
         };
 
         
