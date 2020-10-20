@@ -32,6 +32,7 @@ namespace RecordsTestProject
             }
 
             //assert
+            Assert.AreEqual(2,listRecord.Count);
         }
     }
 }
