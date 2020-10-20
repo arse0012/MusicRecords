@@ -18,7 +18,7 @@ namespace MusicRecords
             
         }
 
-        public record(string title, string artist, int duration, string yearOfPublication)
+        public record(int id, string title, string artist, int duration, string yearOfPublication)
         {
              _id = 0;
             _title = title;
