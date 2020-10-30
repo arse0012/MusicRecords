@@ -7,12 +7,6 @@ namespace MusicRecords
 {
     public class record
     {
-        private int _id;
-        private string _title;
-        private string _artist;
-        private int _duration;
-        private string _yearOfPublication;
-
         public record()
         {
             
@@ -20,40 +14,21 @@ namespace MusicRecords
 
         public record(int id, string title, string artist, int duration, string yearOfPublication)
         {
-             _id= id;
-            _title = title;
-            _artist = artist;
-            _duration = duration;
-            _yearOfPublication = yearOfPublication;
+             Id= id;
+            Title = title;
+            Artist = artist;
+            Duration = duration;
+            YearOfPublication = yearOfPublication;
         }
 
-        public string Title
-        {
-            get { return _title;}
-            set { _title = value; }
-        }
-        public string Artist
-        {
-            get { return _artist;}
-            set { _artist = value; }
+        public string Title { get; set; }
 
-        }
+        public string Artist { get; set; }
 
-        public int Duration
-        {
-            get { return _duration;}
-            set { _duration = value; }
-        }
+        public int Duration { get; set; }
 
-        public string YearOfPublication
-        {
-            get { return _yearOfPublication;}
-            set { _yearOfPublication = value; }
-        }
-        public int Id
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+        public string YearOfPublication { get; set; }
+
+        public int Id { get; set; }
     }
 }

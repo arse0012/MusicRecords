@@ -36,6 +36,34 @@ namespace MusicRecords.Controllers
             return recordList.Find(i => i.Id == id);
         }
 
+        [HttpGet]
+        [Route("Title/{title}")]
+        public IEnumerable<record> GetByTitle(string title)
+        {
+            return recordList.FindAll(i => i.Title.Contains(title));
+        }
+
+        [HttpGet]
+        [Route("Artist/{artist}")]
+        public IEnumerable<record> GetByArtist(string artist)
+        {
+            return recordList.FindAll(i => i.Artist.Contains(artist));
+        }
+
+        [HttpGet]
+        [Route("Duration")]
+        public IEnumerable<record> GetByDuration([FromQuery]FilterRecord duration)
+        {
+            if (duration.LongDuration == 0) duration.LongDuration = int.MaxValue;
+            return recordList.FindAll(i => i.Duration > duration.ShortDuration && i.Duration < duration.LongDuration);
+        }
+        [HttpGet]
+        [Route("YearOfPub/{yearOfPub}")]
+        public IEnumerable<record> GetByYear(string yearOfPub)
+        {
+            return recordList.FindAll(i => i.YearOfPublication.Contains(yearOfPub));
+        }
+
         // POST: api/Records
         [HttpPost]
         public void Post([FromBody] string value)
